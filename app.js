@@ -23,7 +23,7 @@ app.use(helmet());
 app.use(express.json({ limit: 1000000000 }));
 
 //api  routes
-app.get('/api/v1/tiktok-clone', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({ success: true, message: 'tiktok-clone app!!!' });
 });
 app.use('/api/v1/tiktok-clone/users', usersRoutes);
